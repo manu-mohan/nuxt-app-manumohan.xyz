@@ -26,7 +26,6 @@ jobs:
   deploy:
     docker:
       - image: circleci/node:8
-    context: GlobalConfig
     environment:
       - SOURCE_BRANCH: master
       - TARGET_BRANCH: gh-pages
@@ -64,6 +63,7 @@ workflows:
     jobs:
       - build
       - deploy:
+          context: GlobalConfig
           requires:
             - build
           filters:
