@@ -20,9 +20,9 @@ jobs:
       - run: npm run test
       - run: npm run generate
       - persist_to_workspace:
-        root: workspace
-        paths:
-            - echo-output
+          root: workspace
+          paths:
+              - echo-output
       - store_artifacts:
           path: /tmp/dist
   deploy:
