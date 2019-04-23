@@ -2,9 +2,6 @@ version: 2
 jobs:
   build:
     working_directory: /tmp
-    branches:
-      ignore:
-        - gh-pages
     docker:
       - image: circleci/node:8
     steps:
@@ -36,7 +33,7 @@ jobs:
       - run: git config user.email $GITHUB_EMAIL
 workflows:
   version: 2
-  build:
+  build_deploy:
     jobs:
       - build
       # - deploy:
