@@ -18,7 +18,9 @@ jobs:
       - run: npm run generate
       - persist_to_workspace:
           root: ~/project
-          paths: dist
+          paths:
+            - dist
+            - .circleci
       - store_artifacts:
           path: dist
   deploy:
@@ -45,9 +47,7 @@ jobs:
             git rm -rf .
             cd ..
 
-            npm run build
-
-            cp -a build/. out/.
+            cp -a dist/. out/.
 
             mkdir -p out/.circleci && cp -a .circleci/. out/.circleci/.
             cd out
