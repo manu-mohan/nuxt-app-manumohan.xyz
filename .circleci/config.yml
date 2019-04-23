@@ -43,7 +43,9 @@ jobs:
               git clone $CIRCLE_REPOSITORY_URL out
 
               cd out
+              ls -rlt
               git checkout $TARGET_BRANCH || git checkout --orphan $TARGET_BRANCH
+              ls -rlt
               git rm -rf .
               cd ..
 
@@ -52,6 +54,7 @@ jobs:
               mkdir -p out/.circleci && cp -a .circleci/. out/.circleci/.
               cd out
 
+              ls -rlt
               git add -A
               git commit -m "Automated deployment to GitHub Pages: ${CIRCLE_SHA1}" --allow-empty
 
