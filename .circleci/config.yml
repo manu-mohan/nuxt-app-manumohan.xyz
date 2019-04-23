@@ -19,8 +19,6 @@ jobs:
       - run: npm run generate
       - persist_to_workspace:
           root: dist
-          paths:
-              - echo-output
       - store_artifacts:
           path: dist
   deploy:
