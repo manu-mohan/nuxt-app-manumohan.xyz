@@ -1,24 +1,47 @@
 version: 2
 jobs:
   build:
+    working_directory: /tmp
+    branches:
+      ignore:
+        - gh-pages
     docker:
       - image: circleci/node:8
     steps:
       - checkout
       - restore_cache:
           keys:
-            - npm-{{ checksum "package.json" }}
+            - npm-cache-{{ .Branch }}-{{ checksum "package.json" }}
       - run: npm install
       - save_cache:
           paths:
             - node_modules
-          key: npm-{{ checksum "package.json" }}
+          key: npm-cache-{{ .Branch }}-{{ checksum "package.json" }}
       - run: npm run lint
       - run: npm run build
       - run: npm run test
       - run: npm run generate
+      - store_artifacts:
+          path: /tmp/dist
+  deploy:
+    docker:
+      - image: circleci/node:8
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - npm-cache-{{ .Branch }}-{{ checksum "package.json" }}
+      - run: npm install
+      - run: git config user.name $GITHUB_NAME
+      - run: git config user.email $GITHUB_EMAIL
 workflows:
   version: 2
   build:
     jobs:
       - build
+      # - deploy:
+      #     requires:
+      #       - build
+      #     filters:
+      #       branches:
+      #         only: master
