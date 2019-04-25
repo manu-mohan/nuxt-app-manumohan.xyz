@@ -13,7 +13,6 @@ jobs:
           paths:
             - node_modules
           key: npm-cache-{{ .Branch }}-{{ checksum "package.json" }}
-      - run: npm run lint
       - run: npm run test
       - run: npm run generate
       - run: ls -lart
@@ -62,9 +61,9 @@ jobs:
               git rm -rf .
               cd ..
 
-              cp -a dist/. out/.
+              cp -a workspace/dist/. out/.
 
-              mkdir -p out/.circleci && cp -a .circleci/. out/.circleci/.
+              mkdir -p out/.circleci && cp -a workspace/.circleci out/.circleci/.
               cd out
 
               ls -ralt
