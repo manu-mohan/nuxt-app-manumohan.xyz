@@ -73,6 +73,8 @@ jobs:
               git config --global user.email "${GITHUB_EMAIL}"
               git config --global user.name "${GITHUB_NAME}"
 
+              mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
+
               git clone "${CIRCLE_REPOSITORY_URL}" out
 
               cd out
