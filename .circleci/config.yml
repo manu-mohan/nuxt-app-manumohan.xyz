@@ -23,6 +23,8 @@ jobs:
             - .circleci
       - store_artifacts:
           path: dist
+      - store_artifacts:
+          path: .circleci
   shellcheck:
     docker:
       - image: koalaman/shellcheck-alpine:stable
