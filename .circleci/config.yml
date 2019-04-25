@@ -41,19 +41,17 @@ jobs:
     steps:
       - attach_workspace:
           at: workspace
-      - run: echo {{ .Environment.GITHUB_REPO_URL }}
-      - run: echo ${GITHUB_REPO_URL}
       - deploy:
           name: Deploy
           type: shell
           command: |
             if [ "${CIRCLE_BRANCH}" == "${SOURCE_BRANCH}" ]; then
-              git config --global user.email "{{ .Environment.GITHUB_EMAIL }}"
-              git config --global user.name "{{ .Environment.GITHUB_NAME }}"
+              git config --global user.email "${GITHUB_EMAIL}"
+              git config --global user.name "${GITHUB_NAME}"
 
               mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
 
-              git clone "{{ .Environment.GITHUB_REPO_URL }}" out
+              git clone "${GITHUB_REPO_URL}" out
 
               cd out
               git checkout "${TARGET_BRANCH}" || git checkout --orphan "${TARGET_BRANCH}"
