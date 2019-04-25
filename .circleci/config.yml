@@ -40,7 +40,7 @@ jobs:
       - TARGET_BRANCH: gh-pages
     steps:
       - attach_workspace:
-          at: dist
+          at: workspace
       - run: ls -larRt
       - deploy:
           name: Deploy
