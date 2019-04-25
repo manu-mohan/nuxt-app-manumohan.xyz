@@ -41,14 +41,13 @@ jobs:
     steps:
       - attach_workspace:
           at: workspace
-      - run: echo "${GITHUB_EMAIL}"
       - deploy:
           name: Deploy
           type: shell
           command: |
             if [ "${CIRCLE_BRANCH}" == "${SOURCE_BRANCH}" ]; then
               git config --global user.email "${GITHUB_EMAIL}"
-              git config --global user.name "${GITHUB_NAME}"
+              git config --global user.name "${GITHUB_USERNAME}"
 
               mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
 
