@@ -2,7 +2,7 @@
   <v-layout>
     <v-flex text-xs-center>
       <blockquote class="blockquote">
-        Coming soon
+        Coming soon!
       </blockquote>
     </v-flex>
   </v-layout>
