@@ -1,20 +1,8 @@
 <template>
   <v-app dark>
-    <v-navigation-drawer
-      v-model="drawer"
-      :mini-variant="miniVariant"
-      :clipped="clipped"
-      fixed
-      app
-    >
+    <v-navigation-drawer v-model="drawer" :mini-variant="miniVariant" :clipped="clipped" fixed app>
       <v-list>
-        <v-list-tile
-          v-for="(item, i) in items"
-          :key="i"
-          :to="item.to"
-          router
-          exact
-        >
+        <v-list-tile v-for="(item, i) in items" :key="i" :to="item.to" router exact>
           <v-list-tile-action>
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-tile-action>
@@ -27,7 +15,7 @@
     <v-toolbar :clipped-left="clipped" fixed app>
       <v-toolbar-side-icon @click="drawer = !drawer" />
       <v-toolbar-title v-text="title" />
-      <v-container justify-center="" fill-height>
+      <v-container justify-center fill-height>
         <logo />
       </v-container>
       <v-spacer />
@@ -39,7 +27,7 @@
     </v-content>
     <v-footer :fixed="fixed" app>
       <v-container justify-center fill-height>
-        <span>&copy; Manu Mohan {{ currentYear }}</span>
+        <v-subheader>&copy; Manu Mohan {{ currentYear }}</v-subheader>
       </v-container>
     </v-footer>
   </v-app>
