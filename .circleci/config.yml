@@ -16,11 +16,12 @@ jobs:
       - run: npm run lint
       - run: npm run test
       - run: npm run generate
+      - run: ls -lart
       - persist_to_workspace:
           root: ~/project
           paths:
             - dist
-            - ./circleci
+            - .circleci
       - store_artifacts:
           path: dist
   shellcheck:
