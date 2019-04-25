@@ -35,7 +35,7 @@ jobs:
               git config --global user.email "${GITHUB_EMAIL}"
               git config --global user.name "${GITHUB_NAME}"
 
-              git clone "${CIRCLE_REPOSITORY_URL}"" out
+              git clone "${CIRCLE_REPOSITORY_URL}" out
 
               cd out
               ls -rlt
@@ -73,7 +73,7 @@ jobs:
               git config --global user.email "${GITHUB_EMAIL}"
               git config --global user.name "${GITHUB_NAME}"
 
-              git clone "${CIRCLE_REPOSITORY_URL}"" out
+              git clone "${CIRCLE_REPOSITORY_URL}" out
 
               cd out
               ls -rlt
