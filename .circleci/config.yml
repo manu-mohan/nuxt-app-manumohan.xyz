@@ -1,6 +1,9 @@
 version: 2
 jobs:
   build:
+    branches:
+      ignore:
+        - gh-pages
     docker:
       - image: circleci/node:8
     steps:
@@ -76,9 +79,9 @@ workflows:
     jobs:
       - build:
         filters:
-              branches:
-                only: master
-      # - shellcheck
+          branches:
+            only: master
+        # - shellcheck
       - deploy:
           context: GlobalConfig
           requires:
