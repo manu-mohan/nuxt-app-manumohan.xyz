@@ -41,6 +41,8 @@ jobs:
     steps:
       - attach_workspace:
           at: workspace
+      - run: echo "{{ .Environment.GITHUB_REPO_URL }}"
+      - run: echo "{{ .GITHUB_REPO_URL }}"
       - deploy:
           name: Deploy
           type: shell
