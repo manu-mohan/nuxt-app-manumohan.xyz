@@ -31,30 +31,7 @@ jobs:
       - run:
           name: Check Scripts
           command: |
-            if [ "${CIRCLE_BRANCH}" == "${SOURCE_BRANCH}" ]; then
-              git config --global user.email "${GITHUB_EMAIL}"
-              git config --global user.name "${GITHUB_NAME}"
-
-              git clone "${CIRCLE_REPOSITORY_URL}" out
-
-              cd out
-              ls -rlt
-              git checkout "${TARGET_BRANCH}" || git checkout --orphan "${TARGET_BRANCH}"
-              ls -rlt
-              git rm -rf .
-              cd ..
-
-              cp -a dist/. out/.
-
-              mkdir -p out/.circleci && cp -a .circleci/. out/.circleci/.
-              cd out
-
-              ls -rlt
-              git add -A
-              git commit -m "Automated deployment to GitHub Pages: ${CIRCLE_SHA1}" --allow-empty
-
-              git push origin "${TARGET_BRANCH}"
-            fi
+            echo "Hello"
   deploy:
     docker:
       - image: circleci/node:8
@@ -64,7 +41,7 @@ jobs:
     steps:
       - attach_workspace:
           at: dist
-      - run: ls -lrt
+      - run: ls -lart
       - deploy:
           name: Deploy
           type: shell
@@ -78,9 +55,9 @@ jobs:
               git clone "${CIRCLE_REPOSITORY_URL}" out
 
               cd out
-              ls -rlt
+              ls -ralt
               git checkout "${TARGET_BRANCH}" || git checkout --orphan "${TARGET_BRANCH}"
-              ls -rlt
+              ls -ralt
               git rm -rf .
               cd ..
 
@@ -89,7 +66,7 @@ jobs:
               mkdir -p out/.circleci && cp -a .circleci/. out/.circleci/.
               cd out
 
-              ls -rlt
+              ls -ralt
               git add -A
               git commit -m "Automated deployment to GitHub Pages: ${CIRCLE_SHA1}" --allow-empty
 
@@ -100,12 +77,11 @@ workflows:
   build_deploy:
     jobs:
       - build
-      - shellcheck
+      # - shellcheck
       - deploy:
           context: GlobalConfig
           requires:
             - build
-            - shellcheck
           filters:
             branches:
               only: master
