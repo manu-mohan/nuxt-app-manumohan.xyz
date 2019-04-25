@@ -10,12 +10,8 @@ workbox.precaching.precacheAndRoute([
     "revision": "92d3f50f968aacf59de05612c7c6c1c9"
   },
   {
-    "url": "/_nuxt/4c5c77a36058ecfb427c.js",
-    "revision": "47bb540331ffb184d6577c411cdb5694"
-  },
-  {
-    "url": "/_nuxt/4d70f059770a010a4057.js",
-    "revision": "6e3904ce12c207a76c3dfecbc0f8ea1b"
+    "url": "/_nuxt/a25792017d48e3c3a437.js",
+    "revision": "7e2bff232d23d9df32173263d872047c"
   },
   {
     "url": "/_nuxt/b95663f2f3c9949b66e8.js",
@@ -28,6 +24,10 @@ workbox.precaching.precacheAndRoute([
   {
     "url": "/_nuxt/fbd6980956f37ce3b508.js",
     "revision": "cd50bd07c1a9bd62a6ba955cc80c9224"
+  },
+  {
+    "url": "/_nuxt/fccaae60e8110d00eb1b.js",
+    "revision": "eb989d91e4cad64d589a27f289903c85"
   }
 ], {
   "cacheId": "manumohan.xyz",
