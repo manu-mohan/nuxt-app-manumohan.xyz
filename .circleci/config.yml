@@ -20,7 +20,7 @@ jobs:
           root: ~/project
           paths:
             - dist
-            - .circleci
+            - ./circleci
       - store_artifacts:
           path: dist
       - store_artifacts:
