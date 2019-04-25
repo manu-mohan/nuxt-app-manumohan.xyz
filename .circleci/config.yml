@@ -31,15 +31,15 @@ jobs:
       - run:
           name: Check Scripts
           command: |
-            if [ $CIRCLE_BRANCH == $SOURCE_BRANCH ]; then
-              git config --global user.email $GITHUB_EMAIL
-              git config --global user.name $GITHUB_NAME
+            if [ ${CIRCLE_BRANCH} == ${SOURCE_BRANCH} ]; then
+              git config --global user.email ${GITHUB_EMAIL}
+              git config --global user.name ${GITHUB_NAME}
 
-              git clone $CIRCLE_REPOSITORY_URL out
+              git clone ${CIRCLE_REPOSITORY_URL} out
 
               cd out
               ls -rlt
-              git checkout $TARGET_BRANCH || git checkout --orphan $TARGET_BRANCH
+              git checkout ${TARGET_BRANCH} || git checkout --orphan ${TARGET_BRANCH}
               ls -rlt
               git rm -rf .
               cd ..
@@ -53,7 +53,7 @@ jobs:
               git add -A
               git commit -m "Automated deployment to GitHub Pages: ${CIRCLE_SHA1}" --allow-empty
 
-              git push origin $TARGET_BRANCH
+              git push origin ${TARGET_BRANCH}
             fi
   deploy:
     docker:
@@ -69,15 +69,15 @@ jobs:
           name: Deploy
           type: shell
           command: |
-            if [ $CIRCLE_BRANCH == $SOURCE_BRANCH ]; then
-              git config --global user.email $GITHUB_EMAIL
-              git config --global user.name $GITHUB_NAME
+            if [ ${CIRCLE_BRANCH} == ${SOURCE_BRANCH} ]; then
+              git config --global user.email ${GITHUB_EMAIL}
+              git config --global user.name ${GITHUB_NAME}
 
-              git clone $CIRCLE_REPOSITORY_URL out
+              git clone ${CIRCLE_REPOSITORY_URL} out
 
               cd out
               ls -rlt
-              git checkout $TARGET_BRANCH || git checkout --orphan $TARGET_BRANCH
+              git checkout ${TARGET_BRANCH} || git checkout --orphan ${TARGET_BRANCH}
               ls -rlt
               git rm -rf .
               cd ..
@@ -91,7 +91,7 @@ jobs:
               git add -A
               git commit -m "Automated deployment to GitHub Pages: ${CIRCLE_SHA1}" --allow-empty
 
-              git push origin $TARGET_BRANCH
+              git push origin ${TARGET_BRANCH}
             fi
 workflows:
   version: 2
