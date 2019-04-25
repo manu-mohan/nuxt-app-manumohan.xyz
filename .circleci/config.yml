@@ -15,6 +15,7 @@ jobs:
           key: npm-cache-{{ .Branch }}-{{ checksum "package.json" }}
       - run: npm run test
       - run: npm run generate
+      - run: cp CNAME dist/.
       - run: ls -lart
       - persist_to_workspace:
           root: ~/project
