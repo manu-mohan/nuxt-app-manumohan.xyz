@@ -31,7 +31,7 @@ jobs:
       - run:
           name: Check Scripts
           command: |
-            if [ ${CIRCLE_BRANCH} == ${SOURCE_BRANCH} ]; then
+            if [ "${CIRCLE_BRANCH}" == "${SOURCE_BRANCH}" ]; then
               git config --global user.email ${GITHUB_EMAIL}
               git config --global user.name ${GITHUB_NAME}
 
