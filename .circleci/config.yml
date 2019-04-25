@@ -41,6 +41,7 @@ jobs:
     steps:
       - attach_workspace:
           at: workspace
+      - run: echo "${GITHUB_EMAIL}"
       - deploy:
           name: Deploy
           type: shell
