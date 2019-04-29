@@ -54,6 +54,7 @@ export default {
         { title: 'React.js (limited)', type: 'experience' },
         { title: 'Mocha/Chai/Jest', type: 'experience' },
         { title: 'TLS/Oauth/SAML', type: 'experience' },
+        { title: 'Oracle/MySql', type: 'experience' },
         { title: 'Shell scripting', type: 'experience' },
         { title: 'CircleCI/Jenkins', type: 'experience' }
       ]
