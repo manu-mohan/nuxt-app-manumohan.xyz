@@ -44,6 +44,7 @@ export default {
         { title: 'GIT', type: 'day' },
         { title: 'New Relic/Pager Duty', type: 'day' },
         { title: 'Splunk', type: 'day' },
+        { title: 'Adobe Analytics', type: 'day' },
         { title: 'PCF', type: 'day' },
         { title: 'Apigee Edge', type: 'day' },
         { title: 'Bamboo', type: 'day' },
