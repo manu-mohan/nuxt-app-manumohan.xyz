@@ -25,7 +25,7 @@
           <v-flex xs12>
             <v-card color="purple" class="white--text vcard">
               <v-card-title class="headline">Working knowledge</v-card-title>
-              <v-card-text>Frontend - Angular, Karma, Jasmine, Jest, Webpack, JWT</v-card-text>
+              <v-card-text>Frontend - Angular, Karma, Jasmine, Jest, Webpack, JWT, Cypress</v-card-text>
               <v-card-text>Backend - Node.js, Spring Boot, OAuth 2.0, TLS, MASSL, SAML, Junit, Mocha, Chai</v-card-text>
               <v-card-text
                 >Tooling/Others - Docker, Kubernetes, Splunk, Adobe Analytics, New Relic, Pager Duty, Bamboo, Jenkins, Apigee Edge, Shell scripting</v-card-text

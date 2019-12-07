@@ -53,6 +53,7 @@ export default {
         { title: 'Webpack', type: 'experience' },
         { title: 'Vue.js (limited)', type: 'experience' },
         { title: 'React.js (limited)', type: 'experience' },
+        { title: 'Cypress', type: 'experience' },
         { title: 'Mocha/Chai/Jest', type: 'experience' },
         { title: 'TLS/Oauth/SAML', type: 'experience' },
         { title: 'Oracle/MySql', type: 'experience' },
