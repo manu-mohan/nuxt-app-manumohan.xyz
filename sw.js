@@ -2,35 +2,35 @@ importScripts('/_nuxt/workbox.4c4f5ca6.js')
 
 workbox.precaching.precacheAndRoute([
   {
-    "url": "/_nuxt/0a9122e01fc56f03ee82.js",
-    "revision": "5a49e5a72677dea5797e4de86b7fb139"
+    "url": "/_nuxt/062b7e338dd838b62b02.js",
+    "revision": "c5a8661c41b22e9e4024960a706935b7"
   },
   {
-    "url": "/_nuxt/231cf2ca52497e953f79.js",
-    "revision": "73e2b366dc40faac6233bdd8fe2ff14c"
+    "url": "/_nuxt/43c8ae08c7c9a6ee427d.js",
+    "revision": "f6eb9460d2e0aea5fd06fad5d42d27f0"
   },
   {
-    "url": "/_nuxt/61b220a61f9895b60878.js",
-    "revision": "e4c48284912b817a730981e070533f6f"
+    "url": "/_nuxt/8447855ff97c551c0479.js",
+    "revision": "5acf191bc372bace2a74cfcca91f875d"
   },
   {
-    "url": "/_nuxt/7660912e5d4ddaea5049.js",
-    "revision": "5a5eecec30b2151e7b5b6b9ca0460ec1"
+    "url": "/_nuxt/946cb7d7fc8581f0af2f.js",
+    "revision": "6e0c647cbb4575a3045598fbc53bb2bb"
   },
   {
-    "url": "/_nuxt/a588d837ea862e6f1756.js",
-    "revision": "601d9ea8e78b858d4328824597d0bd5f"
+    "url": "/_nuxt/95a15e293ee0c14febcd.js",
+    "revision": "20995420e2d8e50c0c6bde4941fa65cb"
   },
   {
-    "url": "/_nuxt/dc659867accbb68f4883.js",
-    "revision": "f28b5a7a5eb57c6a40050277a9468408"
+    "url": "/_nuxt/ba0ee588edb5aa90da9e.js",
+    "revision": "539c0875942e86418ac72d72517e7890"
   },
   {
-    "url": "/_nuxt/f001d946a5884fe12677.js",
-    "revision": "a0a0ea8084ceb49f5c43e906dd7b1ee5"
+    "url": "/_nuxt/f60121de1c0715912542.js",
+    "revision": "4cda754809137c05682ddd5ae855b37c"
   }
 ], {
-  "cacheId": "manumohan.xyz",
+  "cacheId": "manumohan.online",
   "directoryIndex": "/",
   "cleanUrls": false
 })
