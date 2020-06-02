@@ -1,10 +1,10 @@
-# manumohan.xyz
+# manumohan.online
 
 > personal website
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 $ yarn install
 

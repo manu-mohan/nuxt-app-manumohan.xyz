@@ -30,7 +30,7 @@
 export default {
   head() {
     return {
-      title: 'manumohan.xyz - Resume'
+      title: 'manumohan.online - Resume'
     }
   },
   data() {
