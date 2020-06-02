@@ -58,7 +58,8 @@ export default {
         { title: 'TLS/Oauth/SAML', type: 'experience' },
         { title: 'Oracle/MySql', type: 'experience' },
         { title: 'Shell scripting', type: 'experience' },
-        { title: 'CircleCI/Jenkins', type: 'experience' }
+        { title: 'CircleCI/Jenkins', type: 'experience' },
+        { title: 'Prometheus/Grafana', type: 'experience' }
       ]
     }
   }
