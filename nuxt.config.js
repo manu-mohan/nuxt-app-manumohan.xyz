@@ -1,5 +1,6 @@
-import VuetifyLoaderPlugin from 'vuetify-loader/lib/plugin'
-import pkg from './package'
+import VuetifyLoaderPlugin from 'vuetify-loader/lib/plugin';
+
+import pkg from './package';
 
 export default {
   mode: 'universal',
@@ -18,8 +19,7 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
         rel: 'stylesheet',
-        href:
-          'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'
+        href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'
       }
     ]
   },
@@ -46,8 +46,12 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
-    '@nuxtjs/google-analytics'
+    '@nuxtjs/gtm'
   ],
+
+  gtm: {
+    id: 'GTM-KWLRSDL'
+  },
 
   googleAnalytics: {
     id: 'UA-138889656-1'
@@ -73,9 +77,11 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {
+    extend(config, ctx)
+    {
       // Run ESLint on save
-      if (ctx.isDev && ctx.isClient) {
+      if (ctx.isDev && ctx.isClient)
+      {
         config.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,
